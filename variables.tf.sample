@@ -1,0 +1,79 @@
+# Variables Configuration
+
+variable "cluster-name" {
+  default     = "core-services-staging"
+  type        = "string"
+  description = "The name of your EKS Cluster"
+}
+
+variable "aws-region" {
+  default     = "ap-south-1"
+  type        = "string"
+  description = "The AWS Region to deploy EKS"
+}
+
+variable "k8s-version" {
+  default     = "1.12"
+  type        = "string"
+  description = "Required K8s version"
+}
+
+variable "eks-vpc" {
+  default     = "vpc-xxxxxx"
+  type        = "string"
+  description = "VPC for EKS"
+}
+
+variable "eks-subnet-0" {
+  default     = "subnet-xxxxxx"
+  type        = "string"
+  description = "The VPC Subnet CIDR in 1a"
+}
+
+variable "eks-subnet-1" {
+  default     = "subnet-yyyyyy"
+  type        = "string"
+  description = "The VPC Subnet CIDR in 1b"
+}
+
+variable "node-instance-type" {
+  default     = "t2.medium"
+  type        = "string"
+  description = "Worker Node EC2 instance type"
+}
+
+variable "node-key-pair" {
+  default     = "deployer-key"
+  type        = "string"
+  description = "Worker Node ssh key pair"
+}
+
+variable "bastion-cidr" {
+  default     = "10.1.100.0/22"
+  type        = "string"
+  description = "Public bastion CIDR"
+}
+
+variable "elb-sg" {
+  default     = "sg-xyxyxy"
+  type        = "string"
+  description = "Public elb security group"
+}
+
+variable "desired-capacity" {
+  default     = 3
+  type        = "string"
+  description = "Autoscaling Desired node capacity"
+}
+
+variable "max-size" {
+  default     = 5
+  type        = "string"
+  description = "Autoscaling maximum node capacity"
+}
+
+variable "min-size" {
+  default     = 1
+  type        = "string"
+  description = "Autoscaling Minimum node capacity"
+}

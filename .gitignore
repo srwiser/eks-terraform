@@ -1,0 +1,23 @@
+*.retry
+*.terraform
+terraform.tfvars
+key.tf
+crash.log
+*.swp
+*.swo
+Session.vim
+*~
+.idea/
+*.tfstate
+variables.tf
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+eks-state
+
+# .tfvars files
+*.tfvars
+variables.tf
+config-map-aws-auth.yaml
